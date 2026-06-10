@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Student Learning Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h1>Smart Student Learning Tracker</h1>
+        </div>
+
+        <button id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+    </header>
+
+    <section class="sdg-banner">
+
+        <h2>SDG 4 - Quality Education</h2>
+
+        <p>
+            A smart platform to track student learning progress,
+            academic performance and educational growth.
+        </p>
+
+    </section>
+
+    <section class="dashboard">
+
+        <div class="card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Total Students</h3>
+            <h2 id="totalStudents">0</h2>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Average Progress</h3>
+            <h2 id="avgProgress">0%</h2>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-award"></i>
+            <h3>Completed Students</h3>
+            <h2 id="completedStudents">0</h2>
+        </div>
+
+    </section>
+
+    <section class="controls">
+
+        <input type="text" id="searchInput" placeholder="Search Student">
+
+        <select id="courseFilter">
+            <option value="all">All Courses</option>
+        </select>
+
+        <button id="exportBtn">
+            <i class="fa-solid fa-file-csv"></i>
+            Export CSV
+        </button>
+
+    </section>
+
+    <section class="form-section">
+
+        <h2>Add New Student</h2>
+
+        <form id="studentForm">
+
+            <input type="text" id="name" placeholder="Student Name" required>
+
+            <input type="number" id="age" placeholder="Age" required>
+
+            <input type="text" id="course" placeholder="Course" required>
+
+            <input type="number" id="progress" placeholder="Progress %" min="0" max="100" required>
+
+            <button type="submit">
+                <i class="fa-solid fa-plus"></i>
+                Add Student
+            </button>
+
+        </form>
+
+    </section>
+
+    <section>
+
+        <h2 class="student-title">
+            Student Records
+        </h2>
+
+        <div id="studentContainer">
+
+        </div>
+
+    </section>
+
+    <div class="modal" id="editModal">
+
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+
+            <h2>Edit Student</h2>
+
+            <input type="text" id="editName" placeholder="Student Name">
+
+            <input type="number" id="editAge" placeholder="Age">
+
+            <input type="text" id="editCourse" placeholder="Course">
+
+            <input type="number" id="editProgress" placeholder="Progress">
+
+            <button id="updateBtn">
+                Update Student
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p>
+            Developed for SDG 4 - Quality Education |
+            Smart Student Learning Tracker
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
